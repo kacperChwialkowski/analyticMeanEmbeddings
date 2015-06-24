@@ -1,11 +1,9 @@
+__author__ = 'kcx' # me, kacper chwialkowski
+
 import abc
 import numpy
 from two_sample_test.analytic import SmoothCFTest, MeanEmbeddingTest
-
-__author__ = 'kcx'
-
 from unittest import TestCase
-
 from numpy.random import seed
 
 
