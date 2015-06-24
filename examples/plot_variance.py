@@ -10,7 +10,7 @@ ft = ft.astype('float')
 
 pvalues = ft[:, :, 0]
 
-plt.subplot(1, 2, 1)
+
 
 
 def confidence_intervals(phat, sgn, n=POOL_SIZE*REPETITIONS, z=1.96):
@@ -26,14 +26,17 @@ for p_values_for_dim, label, c in zip(pvalues.transpose(),  ['Analytic Mean Embe
     plt.fill_between(DIMENSION, confidence_intervals(p_values_for_dim, -1),
                      confidence_intervals(p_values_for_dim, 1), alpha=0.2, color=c[0])
 
-plt.tick_params(axis='both', which='major', labelsize=16)
-plt.xlabel('dimensions', fontsize=24)
-plt.ylabel('test power', fontsize=24)
+plt.tick_params(axis='both', which='major', labelsize=12)
+plt.xlabel('dimensions', fontsize=12)
+plt.ylabel('mean p values', fontsize=12)
 
-plt.title('Variance', fontsize=24)
+plt.title('Variance data set', fontsize=14)
 plt.ylim([-0.04, 0.6])
 
 
-plt.legend(prop={'size':25},loc='best')
+plt.legend(prop={'size':12},loc='best')
+
+# mng = plt.get_current_fig_manager()
+# mng.full_screen_toggle()
 
 plt.show()
