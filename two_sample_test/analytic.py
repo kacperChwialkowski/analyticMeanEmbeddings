@@ -36,7 +36,7 @@ class MeanEmbeddingTest:
 
 class SmoothCFTest:
 
-    def _gen_random(self, dimension,):
+    def _gen_random(self, dimension):
         return numpy.random.randn(dimension, self.num_random_features)
 
 
@@ -48,7 +48,7 @@ class SmoothCFTest:
         _, dimension_x = numpy.shape(self.data_x)
         _, dimension_y = numpy.shape(self.data_y)
         assert dimension_x == dimension_y
-        self.random_frequencies = self._gen_random(frequency_generator, dimension_x)
+        self.random_frequencies = self._gen_random(dimension_x)
 
 
     def compute_pvalue(self):
