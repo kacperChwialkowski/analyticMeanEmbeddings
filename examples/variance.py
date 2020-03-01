@@ -1,6 +1,6 @@
 __author__ = 'kcx'
 
-from two_sample_test.analytic import SmoothCFTest, MeanEmbeddingTest
+from ame.analytic import SmoothCFTest, MeanEmbeddingTest
 from multiprocessing import Pool
 import time
 import gc

@@ -1,4 +1,4 @@
-from two_sample_test.utils import mahalanobis_distance, smooth_difference
+from ame.utils import mahalanobis_distance, smooth_difference
 
 __author__ = 'kcx'
 import numpy
